@@ -1,0 +1,133 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="publishid" content="129944150.12.2.1">
+  <meta name="source" content="原创">
+  <meta property="og:type" content="article">
+  <meta property="article:publish_time" content="2018-08-31T15:03:03+08:00">
+  <meta property="article:author" content="汪亚">
+  <meta property="article:published_first" content="新华网,http://www.xinhuanet.com/politics/2018-08/31/c_129944150.htm">
+  <meta name="pageid" content="1196.1196.0.0.113351.0.0.0.0.0.113898.129944150">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telephone=no" name="format-detection">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta name="keywords" content="维权,宁波,获赔,食品安全法">
+  <meta name="description" content="{{news.title}}">
+  <title>
+    {{news.title}}
+  </title>
+  <link rel="stylesheet" href="http://www.xinhuanet.com/global/public/css/common.css">
+  <link rel="stylesheet" href="http://www.xinhuanet.com/global/css/swiper2.min.css">
+  <link rel="stylesheet" type="text/css" href="http://www.newsres.cn/xl2017/css/main.css">
+  <link rel="stylesheet" href="http://www.newsres.cn/comment20180410/comment20180409.css">
+  <style>
+    .nav {
+      z-index: 999;
+    }
+
+    .h-p2 .qz {
+      display: none;
+    }
+
+    .news-link a {
+      color: #348CEC !important;
+      font-size: 12px !important;
+    }
+
+    .fixhead {
+      width: 100%;
+      height: 65px;
+      background: #fff;
+      -webkit-box-shadow: 0 0px 15px 0 #b1b1b1;
+      box-shadow: 0 5px 15px 0 #b1b1b1;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      line-height: 65px;
+      display: none;
+      overflow: hidden;
+    }
+
+    .fixhead-show {
+      display: block;
+      position: fixed;
+      top: 46px;
+      z-index: 999;
+    }
+
+    .fixhead-con {
+      width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .fixhead-con h1 {
+      font-size: 26px;
+      color: #404040;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="" name="" rlt="1" style="">
+  <div class="header">
+    <div class="h-p3 clearfix">
+      <div class="h-news">
+        <div class="h-title">
+          {{news.title}}
+        </div>
+        <div class="h-info">
+          <span class="h-time"> {{news.time}}</span>
+          <span>来源：<em id="source"> 新华网</em>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="main">
+    <div class="part part1 clearfix" id="">
+      <div class="fllow1-wap left" style="height: 2803px;">
+      </div>
+      <div class="p-right left">
+        <div id="p-detail">
+          {% for para in news.passage%}
+          <p>{{para}}</p>
+          {% endfor %}
+          <!-- <div class="p-tags" id=""> -->
+            <!-- <div class="p-kwap"> -->
+              <!-- <a href="javascript:void(0);">维权</a> -->
+              <!-- <a href="javascript:void(0);">宁波</a> -->
+              <!-- <a href="javascript:void(0);">获赔</a> -->
+              <!-- <a href="javascript:void(0);">食品安全法</a> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        </div>
+        <div class="relate-news">
+          <div class="column-name">
+            相关新闻
+          </div>
+          <ul class="relate-news-wap">
+            {% for news in simiNews%}
+              <li>
+                <a href="http://127.0.0.1:8080/newsBroswer{{news.id}}" target="_blank">
+                  {{news.title}}
+                </a>
+                <div class="r-des">
+                    {{news.passage}}
+                </div>
+                <div class="r-in">
+                  <span class="publish-time">
+                    {{news.time}}
+                  </span>
+                  <span class="r-dis">
+                  </span>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
